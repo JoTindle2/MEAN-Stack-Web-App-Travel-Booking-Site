@@ -6,13 +6,13 @@ Step 1: Create a Website
       cd ~/travlr
   2) Create and initialize a Node Express web application configured with the Handlebars (HBS) view engine.
     
-    a) First, install the Express application template generator using the -g switch for global installation, which will make the generator available for all projects.
+   a) First, install the Express application template generator using the -g switch for global installation, which will make the generator available for all projects.
       
-      npm install -g express-generator
+   npm install -g express-generator
     
-    b) Generate an (empty) Express web application using the Handlebars view engine and a default Git configuration, if one does not already exist.
+   b) Generate an (empty) Express web application using the Handlebars view engine and a default Git configuration, if one does not already exist.
       
-      express --view=hbs --git –-force
+   express --view=hbs --git –-force
   3) Launch the Visual Studio (VS) Code editor and open the newly created Express website.
       
       code .
