@@ -5,7 +5,8 @@
   "author": "Joseph Tindle II <joseph.tindle@snhu.edu>",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
