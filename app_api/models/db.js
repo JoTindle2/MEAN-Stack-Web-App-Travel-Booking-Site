@@ -69,3 +69,4 @@ connect();
 
 // BRING IN THE MONGOOSE SCHEMA
 require('./travlr');
+require('./user');
