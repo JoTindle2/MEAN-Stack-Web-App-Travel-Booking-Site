@@ -47,6 +47,15 @@ app.use('/users', usersRouter);
 app.use('/travel', travelRouter);
 app.use('/api', apiRouter);
 
+// catch unauthorized error and create 401
+app.use(function(err, req, res, next) {
+  if (err.name === 'UnauthorizedError') {
+    res
+      .status(401)
+      .json({"message": err.name + ": " + err.message});
+  }
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -61,15 +70,6 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
-});
-
-// catch unauthorized error and create 401
-app.use((err, req, res, next) => {
-  if (err.name === 'UnauthorizedError') {
-    res
-      .status(401)
-      .json({"message": err.name + ": " + err.message});
-  }
 });
 
 module.exports = app;
